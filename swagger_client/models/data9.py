@@ -32,25 +32,25 @@ class Data9(object):
     """
     swagger_types = {
         'name': 'str',
-        'task_filename': 'str'
+        'inherits_from': 'str'
     }
 
     attribute_map = {
         'name': 'name',
-        'task_filename': 'task_filename'
+        'inherits_from': 'inherits_from'
     }
 
-    def __init__(self, name=None, task_filename=None):  # noqa: E501
+    def __init__(self, name=None, inherits_from=None):  # noqa: E501
         """Data9 - a model defined in Swagger"""  # noqa: E501
 
         self._name = None
-        self._task_filename = None
+        self._inherits_from = None
         self.discriminator = None
 
         if name is not None:
             self.name = name
-        if task_filename is not None:
-            self.task_filename = task_filename
+        if inherits_from is not None:
+            self.inherits_from = inherits_from
 
     @property
     def name(self):
@@ -76,27 +76,27 @@ class Data9(object):
         self._name = name
 
     @property
-    def task_filename(self):
-        """Gets the task_filename of this Data9.  # noqa: E501
+    def inherits_from(self):
+        """Gets the inherits_from of this Data9.  # noqa: E501
 
           # noqa: E501
 
-        :return: The task_filename of this Data9.  # noqa: E501
+        :return: The inherits_from of this Data9.  # noqa: E501
         :rtype: str
         """
-        return self._task_filename
+        return self._inherits_from
 
-    @task_filename.setter
-    def task_filename(self, task_filename):
-        """Sets the task_filename of this Data9.
+    @inherits_from.setter
+    def inherits_from(self, inherits_from):
+        """Sets the inherits_from of this Data9.
 
           # noqa: E501
 
-        :param task_filename: The task_filename of this Data9.  # noqa: E501
+        :param inherits_from: The inherits_from of this Data9.  # noqa: E501
         :type: str
         """
 
-        self._task_filename = task_filename
+        self._inherits_from = inherits_from
 
     def to_dict(self):
         """Returns the model properties as a dict"""

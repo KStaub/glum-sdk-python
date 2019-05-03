@@ -31,72 +31,102 @@ class Data(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'name': 'str',
-        'type': 'str'
+        'workflow': 'str',
+        'salted_hash': 'str',
+        'successful': 'bool'
     }
 
     attribute_map = {
-        'name': 'name',
-        'type': 'type'
+        'workflow': 'workflow',
+        'salted_hash': 'salted_hash',
+        'successful': 'successful'
     }
 
-    def __init__(self, name=None, type=None):  # noqa: E501
+    def __init__(self, workflow=None, salted_hash=None, successful=None):  # noqa: E501
         """Data - a model defined in Swagger"""  # noqa: E501
 
-        self._name = None
-        self._type = None
+        self._workflow = None
+        self._salted_hash = None
+        self._successful = None
         self.discriminator = None
 
-        if name is not None:
-            self.name = name
-        if type is not None:
-            self.type = type
+        self.workflow = workflow
+        self.salted_hash = salted_hash
+        if successful is not None:
+            self.successful = successful
 
     @property
-    def name(self):
-        """Gets the name of this Data.  # noqa: E501
+    def workflow(self):
+        """Gets the workflow of this Data.  # noqa: E501
 
           # noqa: E501
 
-        :return: The name of this Data.  # noqa: E501
+        :return: The workflow of this Data.  # noqa: E501
         :rtype: str
         """
-        return self._name
+        return self._workflow
 
-    @name.setter
-    def name(self, name):
-        """Sets the name of this Data.
+    @workflow.setter
+    def workflow(self, workflow):
+        """Sets the workflow of this Data.
 
           # noqa: E501
 
-        :param name: The name of this Data.  # noqa: E501
+        :param workflow: The workflow of this Data.  # noqa: E501
         :type: str
         """
+        if workflow is None:
+            raise ValueError("Invalid value for `workflow`, must not be `None`")  # noqa: E501
 
-        self._name = name
+        self._workflow = workflow
 
     @property
-    def type(self):
-        """Gets the type of this Data.  # noqa: E501
+    def salted_hash(self):
+        """Gets the salted_hash of this Data.  # noqa: E501
 
           # noqa: E501
 
-        :return: The type of this Data.  # noqa: E501
+        :return: The salted_hash of this Data.  # noqa: E501
         :rtype: str
         """
-        return self._type
+        return self._salted_hash
 
-    @type.setter
-    def type(self, type):
-        """Sets the type of this Data.
+    @salted_hash.setter
+    def salted_hash(self, salted_hash):
+        """Sets the salted_hash of this Data.
 
           # noqa: E501
 
-        :param type: The type of this Data.  # noqa: E501
+        :param salted_hash: The salted_hash of this Data.  # noqa: E501
         :type: str
         """
+        if salted_hash is None:
+            raise ValueError("Invalid value for `salted_hash`, must not be `None`")  # noqa: E501
 
-        self._type = type
+        self._salted_hash = salted_hash
+
+    @property
+    def successful(self):
+        """Gets the successful of this Data.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The successful of this Data.  # noqa: E501
+        :rtype: bool
+        """
+        return self._successful
+
+    @successful.setter
+    def successful(self, successful):
+        """Sets the successful of this Data.
+
+          # noqa: E501
+
+        :param successful: The successful of this Data.  # noqa: E501
+        :type: bool
+        """
+
+        self._successful = successful
 
     def to_dict(self):
         """Returns the model properties as a dict"""

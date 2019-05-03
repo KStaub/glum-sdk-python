@@ -52,13 +52,13 @@ from swagger_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ParametersApi(swagger_client.ApiClient(configuration))
+api_instance = swagger_client.CreatorApi(swagger_client.ApiClient(configuration))
 data = swagger_client.Data() # Data |  (optional)
 
 try:
-    api_instance.parameters_create(data=data)
+    api_instance.results_create(data=data)
 except ApiException as e:
-    print("Exception when calling ParametersApi->parameters_create: %s\n" % e)
+    print("Exception when calling CreatorApi->results_create: %s\n" % e)
 
 ```
 
@@ -68,31 +68,37 @@ All URIs are relative to *http://localhost:8000*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*ParametersApi* | [**parameters_create**](docs/ParametersApi.md#parameters_create) | **POST** /api/parameters/ | 
-*ParametersApi* | [**parameters_delete**](docs/ParametersApi.md#parameters_delete) | **DELETE** /api/parameters/{id}/ | 
-*ParametersApi* | [**parameters_list**](docs/ParametersApi.md#parameters_list) | **GET** /api/parameters/ | 
-*ParametersApi* | [**parameters_partial_update**](docs/ParametersApi.md#parameters_partial_update) | **PATCH** /api/parameters/{id}/ | 
-*ParametersApi* | [**parameters_read**](docs/ParametersApi.md#parameters_read) | **GET** /api/parameters/{id}/ | 
-*ParametersApi* | [**parameters_update**](docs/ParametersApi.md#parameters_update) | **PUT** /api/parameters/{id}/ | 
-*TargetsApi* | [**targets_create**](docs/TargetsApi.md#targets_create) | **POST** /api/targets/ | 
-*TargetsApi* | [**targets_delete**](docs/TargetsApi.md#targets_delete) | **DELETE** /api/targets/{id}/ | 
-*TargetsApi* | [**targets_list**](docs/TargetsApi.md#targets_list) | **GET** /api/targets/ | 
-*TargetsApi* | [**targets_partial_update**](docs/TargetsApi.md#targets_partial_update) | **PATCH** /api/targets/{id}/ | 
-*TargetsApi* | [**targets_read**](docs/TargetsApi.md#targets_read) | **GET** /api/targets/{id}/ | 
-*TargetsApi* | [**targets_update**](docs/TargetsApi.md#targets_update) | **PUT** /api/targets/{id}/ | 
-*TasksApi* | [**tasks_create**](docs/TasksApi.md#tasks_create) | **POST** /api/tasks/ | 
-*TasksApi* | [**tasks_delete**](docs/TasksApi.md#tasks_delete) | **DELETE** /api/tasks/{id}/ | 
-*TasksApi* | [**tasks_list**](docs/TasksApi.md#tasks_list) | **GET** /api/tasks/ | 
-*TasksApi* | [**tasks_partial_update**](docs/TasksApi.md#tasks_partial_update) | **PATCH** /api/tasks/{id}/ | 
-*TasksApi* | [**tasks_read**](docs/TasksApi.md#tasks_read) | **GET** /api/tasks/{id}/ | 
-*TasksApi* | [**tasks_update**](docs/TasksApi.md#tasks_update) | **PUT** /api/tasks/{id}/ | 
-*WorkflowsApi* | [**workflows_create**](docs/WorkflowsApi.md#workflows_create) | **POST** /api/workflows/ | 
-*WorkflowsApi* | [**workflows_delete**](docs/WorkflowsApi.md#workflows_delete) | **DELETE** /api/workflows/{id}/ | 
-*WorkflowsApi* | [**workflows_generate**](docs/WorkflowsApi.md#workflows_generate) | **GET** /api/workflows/{id}/generate/ | 
-*WorkflowsApi* | [**workflows_list**](docs/WorkflowsApi.md#workflows_list) | **GET** /api/workflows/ | 
-*WorkflowsApi* | [**workflows_partial_update**](docs/WorkflowsApi.md#workflows_partial_update) | **PATCH** /api/workflows/{id}/ | 
-*WorkflowsApi* | [**workflows_read**](docs/WorkflowsApi.md#workflows_read) | **GET** /api/workflows/{id}/ | 
-*WorkflowsApi* | [**workflows_update**](docs/WorkflowsApi.md#workflows_update) | **PUT** /api/workflows/{id}/ | 
+*CreatorApi* | [**results_create**](docs/CreatorApi.md#results_create) | **POST** /api/creator/results/ | 
+*CreatorApi* | [**results_delete**](docs/CreatorApi.md#results_delete) | **DELETE** /api/creator/results/{id}/ | 
+*CreatorApi* | [**results_list**](docs/CreatorApi.md#results_list) | **GET** /api/creator/results/ | 
+*CreatorApi* | [**results_partial_update**](docs/CreatorApi.md#results_partial_update) | **PATCH** /api/creator/results/{id}/ | 
+*CreatorApi* | [**results_read**](docs/CreatorApi.md#results_read) | **GET** /api/creator/results/{id}/ | 
+*CreatorApi* | [**results_update**](docs/CreatorApi.md#results_update) | **PUT** /api/creator/results/{id}/ | 
+*WorkflowerApi* | [**parameters_create**](docs/WorkflowerApi.md#parameters_create) | **POST** /api/workflower/parameters/ | 
+*WorkflowerApi* | [**parameters_delete**](docs/WorkflowerApi.md#parameters_delete) | **DELETE** /api/workflower/parameters/{id}/ | 
+*WorkflowerApi* | [**parameters_list**](docs/WorkflowerApi.md#parameters_list) | **GET** /api/workflower/parameters/ | 
+*WorkflowerApi* | [**parameters_partial_update**](docs/WorkflowerApi.md#parameters_partial_update) | **PATCH** /api/workflower/parameters/{id}/ | 
+*WorkflowerApi* | [**parameters_read**](docs/WorkflowerApi.md#parameters_read) | **GET** /api/workflower/parameters/{id}/ | 
+*WorkflowerApi* | [**parameters_update**](docs/WorkflowerApi.md#parameters_update) | **PUT** /api/workflower/parameters/{id}/ | 
+*WorkflowerApi* | [**targets_create**](docs/WorkflowerApi.md#targets_create) | **POST** /api/workflower/targets/ | 
+*WorkflowerApi* | [**targets_delete**](docs/WorkflowerApi.md#targets_delete) | **DELETE** /api/workflower/targets/{id}/ | 
+*WorkflowerApi* | [**targets_list**](docs/WorkflowerApi.md#targets_list) | **GET** /api/workflower/targets/ | 
+*WorkflowerApi* | [**targets_partial_update**](docs/WorkflowerApi.md#targets_partial_update) | **PATCH** /api/workflower/targets/{id}/ | 
+*WorkflowerApi* | [**targets_read**](docs/WorkflowerApi.md#targets_read) | **GET** /api/workflower/targets/{id}/ | 
+*WorkflowerApi* | [**targets_update**](docs/WorkflowerApi.md#targets_update) | **PUT** /api/workflower/targets/{id}/ | 
+*WorkflowerApi* | [**tasks_create**](docs/WorkflowerApi.md#tasks_create) | **POST** /api/workflower/tasks/ | 
+*WorkflowerApi* | [**tasks_delete**](docs/WorkflowerApi.md#tasks_delete) | **DELETE** /api/workflower/tasks/{id}/ | 
+*WorkflowerApi* | [**tasks_list**](docs/WorkflowerApi.md#tasks_list) | **GET** /api/workflower/tasks/ | 
+*WorkflowerApi* | [**tasks_partial_update**](docs/WorkflowerApi.md#tasks_partial_update) | **PATCH** /api/workflower/tasks/{id}/ | 
+*WorkflowerApi* | [**tasks_read**](docs/WorkflowerApi.md#tasks_read) | **GET** /api/workflower/tasks/{id}/ | 
+*WorkflowerApi* | [**tasks_update**](docs/WorkflowerApi.md#tasks_update) | **PUT** /api/workflower/tasks/{id}/ | 
+*WorkflowerApi* | [**workflows_create**](docs/WorkflowerApi.md#workflows_create) | **POST** /api/workflower/workflows/ | 
+*WorkflowerApi* | [**workflows_delete**](docs/WorkflowerApi.md#workflows_delete) | **DELETE** /api/workflower/workflows/{id}/ | 
+*WorkflowerApi* | [**workflows_generate**](docs/WorkflowerApi.md#workflows_generate) | **GET** /api/workflower/workflows/{id}/generate/ | 
+*WorkflowerApi* | [**workflows_list**](docs/WorkflowerApi.md#workflows_list) | **GET** /api/workflower/workflows/ | 
+*WorkflowerApi* | [**workflows_partial_update**](docs/WorkflowerApi.md#workflows_partial_update) | **PATCH** /api/workflower/workflows/{id}/ | 
+*WorkflowerApi* | [**workflows_read**](docs/WorkflowerApi.md#workflows_read) | **GET** /api/workflower/workflows/{id}/ | 
+*WorkflowerApi* | [**workflows_update**](docs/WorkflowerApi.md#workflows_update) | **PUT** /api/workflower/workflows/{id}/ | 
 
 
 ## Documentation For Models
@@ -101,6 +107,9 @@ Class | Method | HTTP request | Description
  - [Data1](docs/Data1.md)
  - [Data10](docs/Data10.md)
  - [Data11](docs/Data11.md)
+ - [Data12](docs/Data12.md)
+ - [Data13](docs/Data13.md)
+ - [Data14](docs/Data14.md)
  - [Data2](docs/Data2.md)
  - [Data3](docs/Data3.md)
  - [Data4](docs/Data4.md)

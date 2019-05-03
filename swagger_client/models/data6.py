@@ -31,26 +31,21 @@ class Data6(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'name': 'str',
-        'inherits_from': 'str'
+        'name': 'str'
     }
 
     attribute_map = {
-        'name': 'name',
-        'inherits_from': 'inherits_from'
+        'name': 'name'
     }
 
-    def __init__(self, name=None, inherits_from=None):  # noqa: E501
+    def __init__(self, name=None):  # noqa: E501
         """Data6 - a model defined in Swagger"""  # noqa: E501
 
         self._name = None
-        self._inherits_from = None
         self.discriminator = None
 
         if name is not None:
             self.name = name
-        if inherits_from is not None:
-            self.inherits_from = inherits_from
 
     @property
     def name(self):
@@ -74,29 +69,6 @@ class Data6(object):
         """
 
         self._name = name
-
-    @property
-    def inherits_from(self):
-        """Gets the inherits_from of this Data6.  # noqa: E501
-
-          # noqa: E501
-
-        :return: The inherits_from of this Data6.  # noqa: E501
-        :rtype: str
-        """
-        return self._inherits_from
-
-    @inherits_from.setter
-    def inherits_from(self, inherits_from):
-        """Sets the inherits_from of this Data6.
-
-          # noqa: E501
-
-        :param inherits_from: The inherits_from of this Data6.  # noqa: E501
-        :type: str
-        """
-
-        self._inherits_from = inherits_from
 
     def to_dict(self):
         """Returns the model properties as a dict"""
